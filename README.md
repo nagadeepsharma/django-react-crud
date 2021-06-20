@@ -1,1 +1,1 @@
-# dowhatyoudo.herokuapp.cpm
+# dowhatyoudo.herokuapp.com
