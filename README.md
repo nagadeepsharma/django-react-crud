@@ -1,4 +1,4 @@
-dowhatyoudo.netlify.com
+# dowhatyoudo.netlify.com
 
-only API--https://wwww.dowhatyoudo.herokuapp.com
+# Only API--dowhatyoudo.herokuapp.com
 
