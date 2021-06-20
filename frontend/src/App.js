@@ -48,7 +48,7 @@ class App extends React.Component {
   fetchTasks(){
     console.log('Fetching...')
 
-    fetch('http://127.0.0.1:8000/api/task-list/')
+    fetch('https://dowhatyoudo.herokuapp.com/task-list/')
     .then(response => response.json())
     .then(data => 
       this.setState({
@@ -77,10 +77,10 @@ class App extends React.Component {
 
     var csrftoken = this.getCookie('csrftoken')
 
-    var url = 'http://127.0.0.1:8000/api/task-create/'
+    var url = 'https://dowhatyoudo.herokuapp.com/task-create/'
 
     if(this.state.editing == true){
-      url = `http://127.0.0.1:8000/api/task-update/${ this.state.activeItem.id}/`
+      url = `https://dowhatyoudo.herokuapp.com/task-update/${ this.state.activeItem.id}/`
       this.setState({
         editing:false
       })
@@ -121,7 +121,7 @@ class App extends React.Component {
   deleteItem(task){
     var csrftoken = this.getCookie('csrftoken')
 
-    fetch(`http://127.0.0.1:8000/api/task-delete/${task.id}/`, {
+    fetch(`https://dowhatyoudo.herokuapp.com/task-delete/${task.id}/`, {
       method:'DELETE',
       headers:{
         'Content-type':'application/json',
@@ -138,7 +138,7 @@ class App extends React.Component {
 
     task.completed = !task.completed
     var csrftoken = this.getCookie('csrftoken')
-    var url = `http://127.0.0.1:8000/api/task-update/${task.id}/`
+    var url = `https://dowhatyoudo.herokuapp.com/task-update/${task.id}/`
 
       fetch(url, {
         method:'POST',
